@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Predict</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+    <div class='login'>
+        <h1>Student Performance Predictor</h1>
+        
+        <form action="{{url_for('predict')}}" method="post">
+        <label for="Hours Studied">Number of Hours Studied</label>
+        <input type="number" name="Hours Studied" id="Hours Studied" required="required" min="0" />
+  
+        <label for="Previous Scores">Previous Score</label>
+        <input type="number" name="Previous Scores" placeholder="Previous Scores" required="required" min="0" max="100" value="60"/>
+        
+        <label for="Sleep Hours">Number of Hours Slept</label>
+        <input type="number" name="Sleep Hours" id="Sleep Hours" required="required" min="0" />
+        
+        <label for="Papers Practiced">Sample Papers Practiced</label>
+        <input type="number" name="Sample Question Papers Practiced" id="Papers Practiced" required="required" min="0" />
+        
+        <input type="hidden" name="Extracurricular Activities" value="0" />
+        <label for="Extracurricular Activities">Extracurricular Activities</label>
+        <input type="checkbox" name="Extracurricular Activities" id="Extracurricular Activities" value="1" />
+
+            <button class="button" type="submit">Generate Prediction</button>
+        </form>
+    
+        {{ prediction_text }}
+    </div>
+</body>
+</html>

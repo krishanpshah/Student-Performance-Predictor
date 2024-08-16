@@ -1,0 +1,46 @@
+.button:hover{
+    background-color: #434c5e;
+    transition-duration:0.3s ;
+}
+.button:focus{
+    outline-color: transparent;
+    outline-style: solid;
+    box-shadow: 0 0 0 3px #434c5e;
+    transition-duration: 0.1s;
+}
+.button:active{
+    background-color: #10b3e993;
+}
+
+body {
+    height: auto;
+    width: auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: Verdana, Tahoma, sans-serif;
+    background: #afdeee;
+}
+
+
+form {
+    width: 300px;
+    margin: auto;
+}
+input, button {
+    display: block;
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 0%;
+    text-align: center;
+    font-family: Verdana, Tahoma, sans-serif;
+}
+input[type="checkbox"] {
+    width: auto;
+    display: inline-block;
+    margin-left: 5px;
+    margin-top: 10px;
+}
